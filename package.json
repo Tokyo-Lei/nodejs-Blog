@@ -1,0 +1,27 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanyinping/nodeJs-blog.git"
+  },
+  "author": "tanyp <759227027@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanyinping/nodeJs-blog/issues"
+  },
+  "homepage": "https://github.com/tanyinping/nodeJs-blog#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "body-parser": "^1.15.2",
+    "cookies": "^0.6.1",
+    "markdown": "^0.5.0",
+    "mongoose": "^4.5.7",
+    "swig": "^1.4.2"
+  }
+}

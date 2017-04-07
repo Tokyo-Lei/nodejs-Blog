@@ -1,0 +1,8 @@
+﻿# 忽略*.idea和*.idea文件
+*.[idea]
+# 忽略node_modules文件和node_modules目录
+node_modules
+.idea
+.gitattributes
+# 忽略db文件夹中的内容
+/db/
