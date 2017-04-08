@@ -295,6 +295,8 @@ http.createServer(app).listen(1337);
 上面代码使用`app.use`方法，注册了两个中间件。收到`HTTP`请求后，先调用第一个中间件，在控制台输出一行信息，然后通过`next`方法，将执行权传给第二个中间件，输出`HTTP`回应。由于第二个中间件没有调用`next`方法，所以`request`对象就不再向后传递了。
 
 参考：
+
 http://www.expressjs.com.cn/guide/using-middleware.html
+
 http://javascript.ruanyifeng.com/nodejs/express.html#
 
