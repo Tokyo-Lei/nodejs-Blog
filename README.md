@@ -15,11 +15,10 @@
   │-- package.json
 ```
 
-# 有关知识点
 
 下面是本项目涉及到的一些知识点，代码内容和项目无关。
 
-## mongodb
+# mongodb
 
 安装
 
@@ -27,7 +26,7 @@
 $ npm install mongoose
 ```
 
-### mongodb 数据库的连接
+## mongodb 数据库的连接
 
 ```
 var mongoose = require('mongoose');
@@ -48,7 +47,7 @@ mongod --dbpath=...\db --port=27018
 
 路径指向本地项目中的db目录。
 
-### 定义模型
+## 定义模型
 
 ```
 var Schema = mongoose.Schema,
@@ -62,11 +61,11 @@ var BlogPost = new Schema({
 });
 ```
 
-### mongoose 操作文档
+## mongoose 操作文档
 
 http://mongoosejs.com/docs/guide.html
 
-## express 框架
+# express 框架
 
 安装 `express` 
 
@@ -150,7 +149,7 @@ var app = express();
 项目中的app对象，就是express的一个实例
 
 
-### 静态文件
+## 静态文件
 
 通过 Express 内置的 `express.static` 托管静态文件。
 
@@ -161,7 +160,7 @@ app.use( '/public', express.static( __dirname + '/public') );
 ```
 
 
-### 路由
+## 路由
 
 路由（Routing）是由一个 URI（或者叫路径）和一个特定的 HTTP 方法（GET、POST 等）组成的。每一个路由都可以有一个或者多个处理器函数，当匹配到路由时，这个/些函数将被执行。
 
@@ -188,7 +187,7 @@ app.get('/example/b', function (req, res, next) {
 });
 ```
 
-#### 响应方法
+### 响应方法
 
 - `res.render(view [, locals] [, callback])` 
 
@@ -204,20 +203,20 @@ res.status(404).send('Sorry, we cannot find that!');
 res.status(500).send({ error: 'something blew up' });
 ```
 
-#### express.Router
+### express.Router
 
 `express.Router` 类创建模块化、可挂载的路由句柄。Router 实例是一个完整的中间件和路由系统。
 
-### 中间件
+## 中间件
 
 简单说，中间件（middleware）就是处理HTTP请求的函数。它最大的特点就是，一个中间件处理完，再传递给下一个中间件。
 
-#### 应用级中间件
+### 应用级中间件
 
 应用级中间件绑定到 app 对象 使用 app.use() 和 app.METHOD()， 其中， METHOD 是需要处理的 HTTP 请求的方法，例如 GET, PUT, POST 等等，全部小写。
 
 
-#### 路由级中间件
+### 路由级中间件
 
 上面的 `express.Router` 就是一个路由中间件
 
@@ -261,7 +260,7 @@ router.get('/user/:id', function (req, res, next) {
 app.use('/', router);
 ```
 
-#### 错误处理中间件
+### 错误处理中间件
 
 ```
 app.use(function(err, req, res, next) {
@@ -270,7 +269,7 @@ app.use(function(err, req, res, next) {
 });
 ```
 
-#### use方法
+### use方法
 
 `use`是`express`注册中间件的方法，它返回一个函数。
 
@@ -299,6 +298,3 @@ http.createServer(app).listen(1337);
 http://www.expressjs.com.cn/guide/using-middleware.html
 http://javascript.ruanyifeng.com/nodejs/express.html#
 
-### 页面渲染
-
-### cookie
