@@ -18,7 +18,7 @@
 
 下面是本项目涉及到的一些知识点，代码内容和项目无关。
 
-# mongodb
+# 一、mongodb
 
 安装
 
@@ -65,7 +65,7 @@ var BlogPost = new Schema({
 
 http://mongoosejs.com/docs/guide.html
 
-# express 框架
+# 二、express 框架
 
 安装 `express` 
 
